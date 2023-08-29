@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee;
+    line-height: 1.65;
+    padding-bottom: 1000px;
+}
+
+/* Latihan 1 */
+.container-satu {
+    max-width: 1000px;   /* Responsive */
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.kolom-utama {
+    flex: 3;
+    order: 2;
+}
+
+.sidebar-satu {
+    flex: 1;
+    offset: 1;
+}
+
+.sidebar-dua {
+    flex: 1;
+    order: 3;
+}
+/* End Latihan 1 */
+
+
+/* Latihan 2 */
+.container-dua {
+    max-width: 1000px;  /* Responsive */
+    margin: 50px auto;
+}
+
+.layanan {
+    padding: 30px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.layanan.satu {
+    background-color: blue;
+}
+
+.layanan.dua {
+    background-color: greenyellow;
+}
+
+.layanan.tiga {
+    background-color: pink;
+}
+/* End Latihan 2 */
+
+
+/* Latihan 3 */
+.container-tiga {
+    max-width: 1000px;  /* Responsive */
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 50%;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+/* End Latihan 3 */
+
+
+/* Latihan 4 */
+.container-empat {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.card {
+    border: 3px solid #999;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: pink;
+    overflow: hidden;
+    margin: 30px 50px;
+}
+
+.card-header {
+    height: 150px;
+    background-color: white;
+}
+
+.card .card-body {
+    text-align: center;
+    padding: 20px;
+}
+
+.card.besar {
+    transform: scale(1.15);
+}
+/* End Latihan 4 */
+
+
+/* Latihan 5 */
+.container-lima {
+    max-width: 1000px;
+    height: 500px;
+    margin: 50px auto;
+    border: 5px solid black;
+}
+
+.kotak {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    color: red;
+        /* Membuat text berada di tengah tanpa flexbox */
+        /* Horizontal */
+        text-align: center;
+        /* Vertical */
+        /* Harus sama dengan tingginya */
+        line-height: 100px;
+        /* *Problem jika tulisannya panjang */
+
+        /* Membuat box berada di tengah tanpa flexbox */
+        /* Horizontal */
+        /* tingginya harus setara dengan width pembungkusnya */
+        margin: 250px auto;
+        /* Vertical */
+        transform: translateY(-50px);
+        /*  */
+}
+/* End Latihan 5 */
+
+
+/* Latihan 6 */
+.container-enam {
+    max-width: 1000px;
+    height: 500px;
+    margin: 50px auto;
+    border: 5px solid black;
+    display: flex;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    color: red;
+    text-align: center;
+    /* jika menggunakan flex bisa menggunakan margin auto untuk vertical & horizontal */
+    margin: auto;
+    display: flex;
+}
+
+.box span {
+    margin: auto;
+}
+/* End Latihan 6 */
+
+
+
+
+
+/* RESPONSIVE */
+
+@media(min-width: 600px) {
+    /* Latihan 2 */
+    .container-dua {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .layanan {
+        width: 30%;
+    }
+    /* End Latihan 2 */
+
+    /* Latihan 3 */
+    .thumbnail {
+        width: 25%;
+    }
+    /* End Latihan 3 */
+
+    /* Latihan 4 */
+    .container-empat {
+        display: flex;
+    }
+
+    .card {
+        flex: 1;
+        margin: 20px;
+    }
+
+    .card.besar {
+        transform: scale(1.12);
+    }
+    /* End Latihan 4 */
+}

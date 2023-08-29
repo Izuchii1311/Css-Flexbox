@@ -1,0 +1,61 @@
+/* == TANPA FLEXBOX == */
+
+/* .container {
+    width: 600px;
+    height: 150px;
+    border: 5px solid black;
+    margin: 30px auto;
+    padding: 5px;
+    box-sizing: border-box;
+} */
+
+/* Karena menggunakan float pasti collaps */
+/* .container::after {
+    content: '';
+    display: block;
+    clear: both;
+} */
+
+/* .container div {
+    width: 130px;
+    height: 130px;
+    background-color: pink;
+    float: left;
+} */
+
+
+/* == DENGAN FLEXBOX == */
+
+.container {
+    width: 600px;
+    height: 400px;
+    border: 5px solid black;
+    margin: 30px auto;
+    padding: 5px;
+    display: flex;
+    /* flex-direction: row; */  /* arah flex */
+    /* flex-wrap: wrap;            turunkan ke bawah jika sudah memenuhi baris */
+    /* justify-content: space-evenly;   mengatur rata dari elemetnnya */
+    align-items: flex-end;       /* mengatur kesejajaran item secara vertical */
+    /* align-content: flex-end;     mengatur jarak antar item terhadap cross axis, hanya berfungsi ketika item lebih dari 1baris */
+}
+
+.container div {
+    /* width: 130px;
+    height: 130px; */
+    background-color: pink;
+    margin: 2px;
+    flex-grow: 1;
+}
+
+.container div.dua {
+    flex: 2;
+    align-self: flex-start;
+}
+
+/* .satu { order: 3; }
+.dua { order: 4; }
+.tiga { order: 5; }
+.empat { order: 6; }
+.lima { order: 1; }
+.enam { order: 2; } */
